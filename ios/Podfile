@@ -15,6 +15,9 @@ prepare_react_native_project!
 
 source 'https://cdn.cocoapods.org/'
 source 'https://github.com/Mapsted/podspec-simulator.git'
+#To work on device comment above line and add the below pod specification
+#source 'https://github.com/Mapsted/podspec.git'
+
 
 target 'MapstedSampleReactNativeExpo' do
   use_frameworks!
