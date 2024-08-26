@@ -4,66 +4,53 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Get started
 
-1. Install dependencies
+## Step 1: Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+## Step 2: Install Mapsted 
 
-   ```bash
-    npx expo start
-   ```
+```sh
+e.g npm install mapsted-react-native
+```
+Please find more details here : https://www.npmjs.com/package/mapsted-react-native
 
-In the output, you'll find options to open the app in a
+## prerequisites
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### iOS
+- Project/ios/Podfile Add source file on top
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+```sh
+source 'https://cdn.cocoapods.org/'
 
-## Get a fresh project
+# To run in simulator add below source target
+source 'https://github.com/Mapsted/podspec-simulator.git'
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+# To run in device add below source target
+source 'https://github.com/Mapsted/podspec.git'
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Project/ios/Podfile set use frameworks in your app target
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
-
-<!-- --------------------------------------------------------- -->
-
-# Expo Prebuild
-
-```bash
-npx expo prebuild
+```sh
+use_frameworks!
 ```
 
-- [doc](https://docs.expo.dev/workflow/prebuild/)
+- Add license file in Resources folder `your_ios_license.key`
 
 
-# Install Mapsted 
+### Android
 
-- [doc](https://developer.mapsted.com/mobile-sdk/getting-started/#react-native)
+- Add license file in Assets folder('/app/src/main/assets') `your_android_license.key`
+
+
+## Step 3: Initialize Mapsted map SDK
+
+We need to call below function to initialize the map SDK.
+
+**launchMapActivity()** 
 
 
 # run ios 
